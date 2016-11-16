@@ -20,7 +20,9 @@ var NativeUserActivity = NativeModules.UserActivity;
    eligibleForHandoff: boolean,
    title: string,
    webpageURL: string,
-   userInfo: any
+   userInfo: any,
+   description: string,
+   thumbnailURL: string,
  };
 
 var UserActivity = {
@@ -32,7 +34,9 @@ var UserActivity = {
       options.eligibleForHandoff,
       options.title,
       options.webpageURL,
-      options.userInfo
+      options.userInfo,
+      options.description,
+      options.thumbnailURL,
     );
   },
 };

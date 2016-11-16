@@ -13,6 +13,8 @@ RCT_EXPORT_METHOD(
            title:(NSString *)title
       webpageURL:(NSString *)webpageURL
         userInfo:(NSDictionary *)userInfo
+     description:(NSString *)description
+    thumbnailURL:(NSString *)thumbnailURL
 )
 {
   // Your implementation here
@@ -38,6 +40,8 @@ RCT_EXPORT_METHOD(
         CSSearchableItemAttributeSet *contentSet = [[CSSearchableItemAttributeSet alloc] initWithItemContentType:activityType];
         contentSet.title = title;
         contentSet.URL = [NSURL URLWithString:webpageURL];
+        contentSet.contentDescription = description;
+        contentSet.thumbnailURL = [NSURL fileURLWithPath:thumbnailURL];
         activity.contentAttributeSet = contentSet;
     }
 
